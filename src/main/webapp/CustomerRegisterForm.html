@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="Form.css" rel="stylesheet" type="text/css">
+<title>Customer Registration Form</title>
+</head>
+<body>
+	<div class="container" style=text-align:center>
+  	<form action="" method="post" >
+  	<h2>REGISTER NEW ACCOUNT</h2>
+  	
+	<br><br>
+	<label for="custName">NAME: </label><br>
+    <input type="text" name="custName" id="custName" required><br>
+    
+	<label for="custIdentificationCard">IC NUMBER: </label><br>
+    <input type="text"  name="custIdentificationCard" id="custIdentificationCard" required><br>
+	
+	<label for="custTelNum">TELEPHONE NO: </label><br>
+    <input type="text" name="custTelNum" id="custTelNum" required><br>
+    
+    <label for="custHomeNo">ADRESS: </label><br>
+    <input type="text" name="custHomeNo" id="custHomeNo" required><br>
+    
+    <label for="custPostCode">POSTCODE: </label><br>
+    <input type="text" name="custPostCode" id="custPostCode" required><br>
+    
+    <label for="custCity">CITY: </label><br>
+    <input type="text" name="custCity" id="custCity" required><br>
+    
+    <label for="custState">STATE: </label><br>
+    <select id="custState" name = "custState" class = "custom-select" required>
+		<option value=""></option>	
+		<option value="JOHOR">JOHOR</option>
+		<option value="MELAKA">MELAKA</option>
+		<option value="KEDAH">KEDAH</option>
+		<option value="KELANTAN">KELANTAN</option>
+		<option value="NEGERI SEMBILAN">NEGERI SEMBILAN</option>
+		<option value="PAHANG">PAHANG</option>
+		<option value="PERAK">PERAK</option>
+		<option value="PERLIS">PERLIS</option>
+		<option value="SELANGOR">SELANGOR</option>
+		<option value="TERENGGANU">TERENGGANU</option>
+		<option value="PULAU PINANG">PULAU PINANG</option>
+		<option value="SABAH">SABAH</option>
+		<option value="SARAWAK">SARAWAK</option>
+		<option value="KUALA LUMPUR">KUALA LUMPUR</option>
+		<option value="PUTRAJAYA">PUTRAJAYA</option>
+	</select><br>
+	
+	<label for="custEmail">EMAIL:</label><br>
+    <input type="email"  name="custEmail" required><br>
+    
+    <label for="custPass">PASSWORD:</label><br>
+    <input type="password" name="custPass" required><br>
+    <br>
+    <br>
+    <br>
+	
+    <input type="submit" value="CREATE ACCOUNT">
+  </form>
+</div>
+</body>
+</html>

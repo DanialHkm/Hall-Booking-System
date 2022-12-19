@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<link href="HomePage.css" rel="stylesheet" type="text/css">
+<title>Customer Login</title>
+
+</head>
+<style>
+
+body{
+	
+	background-image : url('Login.jpg');
+	}
+
+</style>
+	
+<body>
+	
+    <div class="header">
+        <div class="header-right">
+            <a href="homePage.html">Home</a>
+            <a class="active" href="CustomerLogIn.html">Login</a>
+        </div>
+    </div>
+	
+	<div class="backBut">
+	<button type="button" onclick="goBack()">&laquo;</button>
+	<script>
+    function goBack() 
+		{
+			 window.history.back();
+        }
+    </script>	
+	</div>
+
+	<marquee><h1>Welcome Customer. Please login to proceed.</h1></marquee>
+	
+	 <br><br><div class="log">
+	 
+	    <h2>Customer Login</h2><br>
+		
+		<form action="customerloginprocess.php" method="post" name="login">
+			<input type="email" name="username" placeholder="Email" required><br>
+			<input type="password" name="password" placeholder="Password" required><br>
+			
+			<a href = "#members page">
+			<input type="submit" name="submit" value="Login"><br>
+			<br></a>
+			<a style=color:white;>Don't have account? </a> <a style=color:white; href="CustomerRegisterForm.html" >Create Account</a>
+			
+		</form>
+
+	
+		</div>
+</body>
+</html>
