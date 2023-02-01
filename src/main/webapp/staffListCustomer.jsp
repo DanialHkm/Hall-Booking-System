@@ -23,7 +23,7 @@
  
   <p>Search for a name customer in the input field.</p>
  <button class="btn"><i></i> Add New Customer</button><br><br>
-  <input class="w3-input w3-border w3-padding" type="text" placeholder="Search for names.." id="myInput" onkeyup="myFunction()">
+  <input href="staffAddCustomer.jsp" class="w3-input w3-border w3-padding" type="text" placeholder="Search for names.." id="myInput" onkeyup="myFunction()">
   
 <table class="w3-table-all w3-margin-top" id="myTable">
     <tr>
@@ -31,16 +31,14 @@
       <th style="width:20%;">Identity Card</th>
       <th style="width:30%;"></th>
     </tr>
+    <c:forEach items="${customer}" var="order">
     <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Germany</td>
-      <td><button class="btn" href="staffviewcust.jsp" ><i></i> View</button><br><br></td>
+     <td><c:out value="${customer.custName}" /></td>
+	 <td><c:out value="${customer.custIC}" /></td>
+     <td><a href="CustomerController?action=view&customerID=<c:out value="${customer.customerID}"/>" class="button">View</a>
+	<a href="CustomerController?action=delete&customerID=<c:out value="${customer.customerID}" />" class="button">Delete</a></td>
     </tr>
-     <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Germany</td>
-      <td> <button class="btn"><i></i>View</button><br><br></td>
-    </tr>
+     </c:forEach>
   </table>
 </div>
 <br><br>
