@@ -9,4 +9,44 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CustomerController</display-name>
+    <servlet-name>CustomerController</servlet-name>
+    <servlet-class>bookinghall.Controller.CustomerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerController</servlet-name>
+    <url-pattern>/CustomerController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CustomerDAO</display-name>
+    <servlet-name>CustomerDAO</servlet-name>
+    <servlet-class>dao.CustomerDAO</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CustomerDAO</servlet-name>
+    <url-pattern>/CustomerDAO</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Customer</display-name>
+    <servlet-name>Customer</servlet-name>
+    <servlet-class>model.Customer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Customer</servlet-name>
+    <url-pattern>/Customer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConnectionManager</display-name>
+    <servlet-name>ConnectionManager</servlet-name>
+    <servlet-class>connection.ConnectionManager</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnectionManager</servlet-name>
+    <url-pattern>/ConnectionManager</url-pattern>
+  </servlet-mapping>
 </web-app>
