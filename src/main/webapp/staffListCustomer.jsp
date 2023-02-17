@@ -22,7 +22,7 @@
   <h2>CUSTOMER LIST</h2>
  
   <p>Search for a name customer in the input field.</p>
- <a href="staffAddCustomer.jsp" class="button">Add Order</a>
+ <a href="staffAddCustomer.jsp" class="button">Add Customer</a>
   <input  class="w3-input w3-border w3-padding" type="text" placeholder="Search for names.." id="myInput" onkeyup="myFunction()">
   
 <table class="w3-table-all w3-margin-top" id="myTable">
