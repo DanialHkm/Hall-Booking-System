@@ -57,8 +57,8 @@
     <label for="staffPass">PASSWORD:</label><br>
     <input type="password" name="staffPass" id="staffPass" required><br>
     
-    <label for="adminID">ADMIN ID:</label><br>
-    <input type="text" name="adminID" id="adminID" required><br>
+    <br>
+    <input type="hidden" name="adminID" id="adminID" value="1"><br>
     <br>
 	
     <input type="submit" value="CREATE ACCOUNT">

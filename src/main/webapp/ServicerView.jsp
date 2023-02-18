@@ -51,11 +51,11 @@
 	}
 	</style>
 <body>
-<%@page import="Staff.staffDAO,Staff.staff,java.util.*"%>
+<%@page import="Servicer.servicerDAO,Servicer.servicer,java.util.*"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>  
    
 <%  
-List<staff> list=staffDAO.getAllRecords();  
+List<servicer> list=servicerDAO.getAllRecords();  
 request.setAttribute("list",list);  
 %> 
 
@@ -63,9 +63,9 @@ request.setAttribute("list",list);
 	 <a href="#"><i class="fa fa-home" class="split"></i> Home</a> 
 	 <a href="#"><i class="" class="split"></i> Assets</a> 
 	 <a href="#"><i class="" class="split"></i> Maintenance</a> 
-	 <a href="#"><i class="" class="split"></i> Servicer</a> 
+	 <a class="active" href="#"><i class="" class="split"></i> Servicer</a> 
 	 <a href="#"><i class="" class="split"></i> Booking</a> 
-	 <a class="active" href="#"><i class="fa fa-users" class="split"></i> Staff</a>
+	 <a href="#"><i class="fa fa-users" class="split"></i> Staff</a>
 	 <a href="#"><i class="fa fa-users" class="split"></i> Customer</a> 
    <li style="float:right"><a href="#"><i class="fa fa-sign-out" class="split"></i> Logout</a> 
 </div>
@@ -77,26 +77,20 @@ request.setAttribute("list",list);
 		  <tr>
 		  	<th>ID</th>
 		  	<th>NAME</th>
-		    <th>EMAIL</th>
-		    <th>ADDRESS</th>
-		    <th>PASSWORD</th>
 		    <th>TELEPHONE NUMBER</th>
-		    <th>ADMIN ID</th>
+		    <th>ADDRESS</th>
 		    <th>ACTION</th>
 		  </tr>
 		 </thead>  
 		<tbody>
 		  <tr>
-		   <c:forEach items="${list}" var="s">  
-		   	<td>${s.getStaffID()}</td>
-		   	<td>${s.getStaffName()}</td>
-			<td>${s.getStaffEmail()}</td>
-			<td>${s.getStaffHomeNo()}, ${s.getStaffAddress()}, ${s.getStaffCity()}, ${s.getStaffPostcode()}, ${s.getStaffState()}.</td>
-			<td>${s.getStaffPass()}</td>
-			<td>${s.getStaffTelNum()}</td>
-			<td>${s.getAdminID()}</td>  
+		   <c:forEach items="${list}" var="se">  
+		   	<td>${se.getServicerID()}</td>
+		   	<td>${se.getServicerName()}</td>
+			<td>0${se.getServicerTelNo()}</td>
+			<td>${se.getServicerHomeNo()}, ${se.getServicerAddress()}, ${se.getServicerCity()}, ${se.getServicerPostcode()}, ${se.getServicerState()}.</td> 
 			<td>
-			<a href="StaffUpdate.jsp?staffID=${s.getStaffID()}"><button class='edit'>EDIT</button> </a> 
+			<a href="ServicerUpdate.jsp?servicerID=${se.getServicerID()}"><button class='edit'>EDIT</button> </a> 
 			</td>
 			</tr>  
 			</tbody>
@@ -105,7 +99,7 @@ request.setAttribute("list",list);
 		</table>
 		<br></br>
 	
-		<a style="float:left"href="StaffAdd.jsp" ><button class="button button2">ADD STAFF</button></a>
+		<a style="float:left"href="ServicerAdd.jsp" ><button class="button button2">ADD STAFF</button></a>
 
 </body>
 </html>
